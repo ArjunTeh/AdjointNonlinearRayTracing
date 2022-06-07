@@ -1,0 +1,140 @@
+default:
+  scene_name: null
+  mask_name: null
+  initial: null
+  focal_list: 
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.png'
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_0.2.png'
+  sensor_dists:
+    - 4
+    - 10
+  iso_meas: False
+  defl_weight: 0.1
+  scene_res: 129
+  res_list:
+    - 5
+    - 9
+    - 17
+    - 33
+    - 65
+    - 129
+  init_res: 5
+  vol_span: 10
+  h: 1
+  step_res: 1
+  optim_iters: 30
+  record_iters: 30
+  nviews: 1
+  angle_span: 360
+  nbins: 256
+  spp: 20
+  source_type: 'cone'
+  npasses: 1
+  loss_type: 'L2'
+  regularization: 0.00
+  image_l2reg: null
+  lr: 0.0005
+  ieps: 0.0001
+  autodiff: False
+  linear: True
+  projected_step: True
+  show_stats: True
+  device: 'cuda'
+
+
+# lkfs3_init-2_l2_cone2_dist20:
+#   res_list:
+#     - 129
+#   init_res: 129
+#   optim_iters: 2000
+#   record_iters: 100
+#   lr: 0.00001
+#   focal_list: 
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.png'
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-1.png'
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_0.2.png'
+#   sensor_dists:
+#     - 4
+#     - 24
+#     - 48
+#   source_angle: 2
+#   initial: 'torch_experiments/9-6-legoknight-fs/lkfs-2_l2_cone2_dist4'
+
+# lkfs_init-2_l2_cone2_dist12:
+#   res_list:
+#     - 129
+#   init_res: 129
+#   optim_iters: 1000
+#   record_iters: 100
+#   lr: 0.00001
+#   focal_list: 
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.png'
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_0.2.png'
+#   sensor_dists:
+#     - 4
+#     - 16
+#   source_angle: 2
+#   initial: 'torch_experiments/9-6-legoknight-fs/lkfs-2_l2_cone2_dist4'
+
+# lkfs-2_l2_cone2_dist4:
+#   focal_list: 
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.png'
+#   sensor_dists:
+#     - 4
+#   source_angle: 2
+
+# lkfs02_2im_srciminfocus_cone1_dist2:
+#   source_image: True
+#   focal_list: 
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_0.2.png'
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.png'
+#   sensor_dists:
+#     - 2
+#     - 16
+#   source_angle: 1
+
+# lkfs-2_2im_srciminfocus_cone1_dist2:
+#   source_image: True
+#   focal_list: 
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.png'
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_0.2.png'
+#   sensor_dists:
+#     - 2
+#     - 16
+#   source_angle: 1
+
+# lkfs02_3im_srciminfocus_cone0_dist2:
+#   source_image: True
+#   focal_list: 
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_0.2.png'
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-1.png'
+#     - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.png'
+#   sensor_dists:
+#     - 2
+#     - 10
+#     - 16
+#   source_angle: 0
+
+lkfs10_3im_srciminfocus_cone1_dist2:
+  source_image: True
+  focal_list: 
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_1.0.png'
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_-0.5.png'
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.0.png'
+  sensor_dists:
+    - 2
+    - 12
+    - 22
+  source_angle: 1
+
+lkfs025_3im_srciminfocus_cone1_dist2:
+  source_image: True
+  focal_list: 
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_0.25.png'
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_-0.5.png'
+    - 'data/img/lego_knight_fs/lego_knight_fs_512_-2.0.png'
+  sensor_dists:
+    - 7
+    - 12
+    - 22
+  source_angle: 1

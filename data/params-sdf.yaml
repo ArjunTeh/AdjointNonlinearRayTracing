@@ -1,0 +1,61 @@
+default:
+  scene_name: null
+  mask_name: null
+  initial: null
+  image_path: 
+    - 'data/img/siggraph-circle.png'
+  sdf_loss: True
+  disp_sdf_path: 
+    - 'data/sdf/l2ball.npy'
+  defl_sdf_path: 
+    - 'data/sdf/l2ball.npy'
+  iso_meas: False
+  defl_weight: 2.0
+  scene_res: 129
+  res_list:
+    - 3
+    - 5
+    - 9
+    - 17
+    - 33
+    - 65
+    - 129
+  init_res: 3
+  vol_span: 20
+  h: 1
+  step_res: 32
+  optim_iters: 100
+  record_iters: 100
+  nviews: 1
+  angle_span: 360
+  nbins: 128
+  spp: 20
+  npasses: 1
+  sensor_distance: 20
+  far_sensor_span: 90
+  regularization: 0.00
+  lr: 0.0001
+  ieps: 0.0001
+  autodiff: False
+  linear: True
+  projected_step: True
+  show_stats: True
+  device: 'cuda'
+
+lr3e-4-w10-final:
+  lr: 0.0003
+  defl_weight: 10
+  npasses: 1
+  autodiff: False
+
+# lr3e-4-w50:
+#   lr: 0.0003
+#   defl_weight: 50
+#   npasses: 1
+#   autodiff: False
+
+# lr3e-4-w100:
+#   lr: 0.0003
+#   defl_weight: 100
+#   npasses: 1
+#   autodiff: False

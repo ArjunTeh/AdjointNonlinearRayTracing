@@ -1,0 +1,61 @@
+default:
+  scene_name: null
+  initial: null
+  image_path: 
+    - 'data/img/siggraph-circle.png'
+  disp_path: 
+    - 'data/disps/point.npy'
+    - 'data/disps/point.npy'
+    - 'data/disps/point.npy'
+    - 'data/disps/point.npy'
+    - 'data/disps/point.npy'
+    - 'data/disps/point.npy'
+  defl_path: 
+    - null
+    - null
+    - null
+    - null
+    - null
+    - null
+  iso_meas: True
+  defl_weight: 2.0
+  scene_res: 129
+  res_list:
+    - 3
+    - 5
+    - 9
+    - 17
+    - 33
+    - 65
+    - 129
+  init_res: 3
+  vol_span: 20
+  h: 1
+  step_res: 32
+  optim_iters: 70
+  record_iters: 20
+  nviews: 1
+  angle_span: 360
+  nbins: 128
+  spp: 10
+  npasses: 1
+  sensor_distance: 0
+  far_sensor_span: 120
+  regularization: 0.00
+  lr: 0.0001
+  ieps: 0.0001
+  autodiff: False
+  linear: True
+  projected_step: True
+  show_stats: True
+  device: 'cuda'
+
+luneburg-10spp-lr1e-3-long:
+  planar_source: True
+  lr: 0.001
+  npasses: 1
+
+# maxwell-10spp-lr1e-3:
+#   planar_source: False
+#   lr: 0.001
+#   npasses: 1

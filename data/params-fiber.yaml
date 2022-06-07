@@ -1,0 +1,80 @@
+default:
+  scene_name: null
+  initial: null
+  disp_path: 
+    - 'data/disps/point.npy'
+  defl_path: 
+    - null
+  defl_weight: 2.0
+  res_list:
+    - 3
+    - 5
+    - 9
+    - 17
+    - 33
+    - 65
+    - 129
+  vol_span: 20
+  step_res: 2
+  cable_radius: 1.0
+  cable_length: 4.0
+  optim_iters: 30
+  record_iters: 30
+  cone_ang: 90
+  nbins: 64
+  spp: 1
+  npasses: 1
+  sensor_distance: 0.0
+  camera_span: 0.05
+  regularization: 0.00
+  lr: 0.0001
+  ieps: 0.0001
+  autodiff: False
+  linear: True
+  projected_step: True
+  show_stats: True
+  device: 'cuda'
+
+# hop2-sd3_14-lr1e-6:
+#   init_scene: 'torch_experiments/12-3-fiber/Back-sd3_14-lr1e-2'
+#   res_list:
+#     - 129
+#   optim_iters: 300
+#   record_iters: 30
+#   sensor_distance: 4.71
+#   cable_length: 5.0
+#   lr: 0.000001
+
+# gtinit-1hop-lr1e-6:
+#     res_list:
+#       - 129
+#     optim_iters: 300
+#     record_iters: 30
+#     cable_length: 5.0
+#     sensor_distance: 1.57
+#     lr: 0.000001
+
+hop2opt-lr1e-2-uniinit:
+  sensor_distance: 1.57
+  hop_distance: 3.14
+  cable_length: 5
+  cable_radius: 1.0
+  cone_ang: 30.0
+  camera_span: 0.1
+  lr: 0.01
+  src_type: 'planar'
+
+# hop2opt-lr5e-7-hires-uniinit:
+#   init_scene: 'torch_experiments/12-3-fiber/Back-sd3_14-lr1e-2'
+#   sensor_distance: 1.57
+#   hop_distance: 3.14
+#   cable_length: 5
+#   cable_radius: 1.0
+#   cone_ang: 60.0
+#   optim_iters: 1000
+#   record_iters: 100
+#   camera_span: 0.1
+#   lr: 0.0000005
+#   src_type: 'planar'
+#   res_list:
+#     - 129
