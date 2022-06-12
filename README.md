@@ -1,4 +1,4 @@
-# AdjointEikonalTracerPrivate
+# Adjoint Nonlinear Ray Tracing
 
 ## Installation Instructions
 
